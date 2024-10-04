@@ -44,3 +44,18 @@
 # Боец наносит удар из лука.
 # Монстр побежден!
 
+from abc import ABC, abstractmethod
+
+class Weapon(ABC):
+
+    @abstractmethod
+    def attack(self):
+        print("Боец наносит удар")
+
+class Sword(Weapon):
+    pass
+
+class Bow(Weapon):
+    pass
+
+
