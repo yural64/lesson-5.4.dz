@@ -50,12 +50,14 @@ class Weapon(ABC):
 
     @abstractmethod
     def attack(self):
-        print("Боец наносит удар")
+        pass
 
 class Sword(Weapon):
-    pass
+    def attack(self):
+    print("Боец наносит удар мечом")
 
 class Bow(Weapon):
-    pass
+    def attack(self):
+    print("Боец стреляет из лука")
 
 
