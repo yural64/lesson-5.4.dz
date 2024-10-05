@@ -60,4 +60,14 @@ class Bow(Weapon):
     def attack(self):
     print("Боец стреляет из лука")
 
+class Fighter():
+    def __init__(self, weapon: Weapon):
+        self.weapon = weapon
+    def fight(self):
+        print(self.weapon.attack()
+
+
+class Monster():
+    pass
+
 
