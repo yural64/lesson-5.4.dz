@@ -54,11 +54,11 @@ class Weapon(ABC):
 
 class Sword(Weapon):
     def attack(self):
-    print("Боец наносит удар мечом")
+        print("Боец наносит удар мечом")
 
 class Bow(Weapon):
     def attack(self):
-    print("Боец стреляет из лука")
+        print("Боец стреляет из лука")
 
 class Fighter():
     def __init__(self, weapon: Weapon):
@@ -66,15 +66,26 @@ class Fighter():
 
     def changeWeapon(self, weapon: Weapon):
         self.weapon = weapon
-        
+
     def fight(self):
-        print(self.weapon.attack()
+        print(self.weapon.attack())
 
 
 class Monster():
     pass
 
-
+# Объекты меч и лук
 sword = Sword()
 bow = Bow()
 
+# Боец с мечом
+fighter = Fighter(sword())
+
+# Боец бьет мечом
+fighter.fight()
+
+# Боец меняет оружие
+fighter.changeWeapon(bow)
+
+# Боец стреляет из лука
+fighter.fight()
