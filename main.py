@@ -46,19 +46,23 @@
 
 from abc import ABC, abstractmethod
 
+
 class Weapon(ABC):
 
     @abstractmethod
     def attack(self):
         pass
 
+
 class Sword(Weapon):
     def attack(self):
         print("Боец наносит удар мечом")
 
+
 class Bow(Weapon):
     def attack(self):
         print("Боец стреляет из лука")
+
 
 class Fighter():
     def __init__(self, weapon: Weapon):
@@ -74,12 +78,13 @@ class Fighter():
 class Monster():
     pass
 
+
 # Объекты меч и лук
-sword = Sword()
+sword: Sword = Sword()
 bow = Bow()
 
 # Боец с мечом
-fighter = Fighter(sword())
+fighter = Fighter(sword)
 
 # Боец бьет мечом
 fighter.fight()
